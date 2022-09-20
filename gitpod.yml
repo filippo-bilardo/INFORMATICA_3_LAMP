@@ -1,0 +1,11 @@
+ports:
+- port: 80
+  onOpen: open-preview
+tasks:
+- name: Terminal
+  command: >
+    echo "";
+    echo "Installazione e configurazione di un server LAMP";
+- name: Apache
+  command: >
+    echo "apachectl start && multitail /var/log/apache2/access.log -I /var/log/apache2/error.log"
